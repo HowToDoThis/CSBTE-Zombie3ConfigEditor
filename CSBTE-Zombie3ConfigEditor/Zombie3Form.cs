@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace CSBTE_Zombie3ConfigEditor
 {
-    public partial class Form1 : Form
+    public partial class Zombie3Form : Form
     {
-        public Form1()
+        public Zombie3Form()
         {
             InitializeComponent();
         }
