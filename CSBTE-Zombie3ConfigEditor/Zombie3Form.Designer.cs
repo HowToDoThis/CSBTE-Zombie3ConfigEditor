@@ -28,38 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Zombie3Form));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MotherHP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.MotherArmor = new System.Windows.Forms.TextBox();
+            this.LordHP = new System.Windows.Forms.TextBox();
+            this.LordArmor = new System.Windows.Forms.TextBox();
+            this.MaxHP = new System.Windows.Forms.TextBox();
+            this.MinHP = new System.Windows.Forms.TextBox();
+            this.RespawnTime = new System.Windows.Forms.TextBox();
+            this.SupplySpawnTime = new System.Windows.Forms.TextBox();
+            this.SupplyFirstSpawnTime = new System.Windows.Forms.TextBox();
+            this.SupplyMin = new System.Windows.Forms.TextBox();
+            this.SupplyMax = new System.Windows.Forms.TextBox();
+            this.LordRegenHP = new System.Windows.Forms.TextBox();
+            this.MotherRegenHP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.RegenTime = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.ZombieBombRadius = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.ZombieBombPower = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.CreatorWatermark = new System.Windows.Forms.Label();
+            this.TiebaWatermark = new System.Windows.Forms.Label();
+            this.QQWatermark = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -71,13 +77,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "母体血量";
             // 
-            // textBox1
+            // MotherHP
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 6);
-            this.textBox1.MaxLength = 5;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 28);
-            this.textBox1.TabIndex = 1;
+            this.MotherHP.Location = new System.Drawing.Point(92, 6);
+            this.MotherHP.MaxLength = 5;
+            this.MotherHP.Name = "MotherHP";
+            this.MotherHP.Size = new System.Drawing.Size(100, 28);
+            this.MotherHP.TabIndex = 1;
             // 
             // label2
             // 
@@ -91,7 +97,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 111);
+            this.label3.Location = new System.Drawing.Point(12, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 22);
             this.label3.TabIndex = 4;
@@ -100,7 +106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 145);
+            this.label5.Location = new System.Drawing.Point(12, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 22);
             this.label5.TabIndex = 8;
@@ -109,7 +115,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 213);
+            this.label6.Location = new System.Drawing.Point(12, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 22);
             this.label6.TabIndex = 10;
@@ -118,7 +124,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 247);
+            this.label7.Location = new System.Drawing.Point(12, 213);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 22);
             this.label7.TabIndex = 12;
@@ -127,107 +133,107 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 312);
+            this.label4.Location = new System.Drawing.Point(12, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 22);
             this.label4.TabIndex = 16;
             this.label4.Text = "复活时间";
             // 
-            // textBox2
+            // MotherArmor
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 40);
-            this.textBox2.MaxLength = 5;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 28);
-            this.textBox2.TabIndex = 17;
+            this.MotherArmor.Location = new System.Drawing.Point(92, 40);
+            this.MotherArmor.MaxLength = 5;
+            this.MotherArmor.Name = "MotherArmor";
+            this.MotherArmor.Size = new System.Drawing.Size(100, 28);
+            this.MotherArmor.TabIndex = 17;
             // 
-            // textBox3
+            // LordHP
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 108);
-            this.textBox3.MaxLength = 5;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 28);
-            this.textBox3.TabIndex = 18;
+            this.LordHP.Location = new System.Drawing.Point(92, 74);
+            this.LordHP.MaxLength = 5;
+            this.LordHP.Name = "LordHP";
+            this.LordHP.Size = new System.Drawing.Size(100, 28);
+            this.LordHP.TabIndex = 18;
             // 
-            // textBox5
+            // LordArmor
             // 
-            this.textBox5.Location = new System.Drawing.Point(92, 142);
-            this.textBox5.MaxLength = 5;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 28);
-            this.textBox5.TabIndex = 19;
+            this.LordArmor.Location = new System.Drawing.Point(92, 108);
+            this.LordArmor.MaxLength = 5;
+            this.LordArmor.Name = "LordArmor";
+            this.LordArmor.Size = new System.Drawing.Size(100, 28);
+            this.LordArmor.TabIndex = 19;
             // 
-            // textBox6
+            // MaxHP
             // 
-            this.textBox6.Location = new System.Drawing.Point(92, 210);
-            this.textBox6.MaxLength = 5;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 28);
-            this.textBox6.TabIndex = 20;
+            this.MaxHP.Location = new System.Drawing.Point(92, 176);
+            this.MaxHP.MaxLength = 5;
+            this.MaxHP.Name = "MaxHP";
+            this.MaxHP.Size = new System.Drawing.Size(100, 28);
+            this.MaxHP.TabIndex = 20;
             // 
-            // textBox8
+            // MinHP
             // 
-            this.textBox8.Location = new System.Drawing.Point(92, 244);
-            this.textBox8.MaxLength = 5;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 28);
-            this.textBox8.TabIndex = 21;
+            this.MinHP.Location = new System.Drawing.Point(92, 210);
+            this.MinHP.MaxLength = 5;
+            this.MinHP.Name = "MinHP";
+            this.MinHP.Size = new System.Drawing.Size(100, 28);
+            this.MinHP.TabIndex = 21;
             // 
-            // textBox9
+            // RespawnTime
             // 
-            this.textBox9.Location = new System.Drawing.Point(92, 309);
-            this.textBox9.MaxLength = 5;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 28);
-            this.textBox9.TabIndex = 22;
+            this.RespawnTime.Location = new System.Drawing.Point(92, 244);
+            this.RespawnTime.MaxLength = 5;
+            this.RespawnTime.Name = "RespawnTime";
+            this.RespawnTime.Size = new System.Drawing.Size(100, 28);
+            this.RespawnTime.TabIndex = 22;
             // 
-            // textBox11
+            // SupplySpawnTime
             // 
-            this.textBox11.Location = new System.Drawing.Point(350, 244);
-            this.textBox11.MaxLength = 5;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 28);
-            this.textBox11.TabIndex = 39;
+            this.SupplySpawnTime.Location = new System.Drawing.Point(350, 244);
+            this.SupplySpawnTime.MaxLength = 5;
+            this.SupplySpawnTime.Name = "SupplySpawnTime";
+            this.SupplySpawnTime.Size = new System.Drawing.Size(100, 28);
+            this.SupplySpawnTime.TabIndex = 39;
             // 
-            // textBox12
+            // SupplyFirstSpawnTime
             // 
-            this.textBox12.Location = new System.Drawing.Point(350, 210);
-            this.textBox12.MaxLength = 5;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 28);
-            this.textBox12.TabIndex = 38;
+            this.SupplyFirstSpawnTime.Location = new System.Drawing.Point(350, 210);
+            this.SupplyFirstSpawnTime.MaxLength = 5;
+            this.SupplyFirstSpawnTime.Name = "SupplyFirstSpawnTime";
+            this.SupplyFirstSpawnTime.Size = new System.Drawing.Size(100, 28);
+            this.SupplyFirstSpawnTime.TabIndex = 38;
             // 
-            // textBox13
+            // SupplyMin
             // 
-            this.textBox13.Location = new System.Drawing.Point(350, 176);
-            this.textBox13.MaxLength = 5;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 28);
-            this.textBox13.TabIndex = 37;
+            this.SupplyMin.Location = new System.Drawing.Point(350, 176);
+            this.SupplyMin.MaxLength = 5;
+            this.SupplyMin.Name = "SupplyMin";
+            this.SupplyMin.Size = new System.Drawing.Size(100, 28);
+            this.SupplyMin.TabIndex = 37;
             // 
-            // textBox14
+            // SupplyMax
             // 
-            this.textBox14.Location = new System.Drawing.Point(350, 142);
-            this.textBox14.MaxLength = 5;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 28);
-            this.textBox14.TabIndex = 36;
+            this.SupplyMax.Location = new System.Drawing.Point(350, 142);
+            this.SupplyMax.MaxLength = 5;
+            this.SupplyMax.Name = "SupplyMax";
+            this.SupplyMax.Size = new System.Drawing.Size(100, 28);
+            this.SupplyMax.TabIndex = 36;
             // 
-            // textBox15
+            // LordRegenHP
             // 
-            this.textBox15.Location = new System.Drawing.Point(350, 74);
-            this.textBox15.MaxLength = 5;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 28);
-            this.textBox15.TabIndex = 35;
+            this.LordRegenHP.Location = new System.Drawing.Point(350, 74);
+            this.LordRegenHP.MaxLength = 5;
+            this.LordRegenHP.Name = "LordRegenHP";
+            this.LordRegenHP.Size = new System.Drawing.Size(100, 28);
+            this.LordRegenHP.TabIndex = 35;
             // 
-            // textBox16
+            // MotherRegenHP
             // 
-            this.textBox16.Location = new System.Drawing.Point(350, 40);
-            this.textBox16.MaxLength = 5;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 28);
-            this.textBox16.TabIndex = 34;
+            this.MotherRegenHP.Location = new System.Drawing.Point(350, 40);
+            this.MotherRegenHP.MaxLength = 5;
+            this.MotherRegenHP.Name = "MotherRegenHP";
+            this.MotherRegenHP.Size = new System.Drawing.Size(100, 28);
+            this.MotherRegenHP.TabIndex = 34;
             // 
             // label8
             // 
@@ -283,13 +289,13 @@
             this.label13.TabIndex = 28;
             this.label13.Text = "母体回血";
             // 
-            // textBox17
+            // RegenTime
             // 
-            this.textBox17.Location = new System.Drawing.Point(350, 6);
-            this.textBox17.MaxLength = 5;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 28);
-            this.textBox17.TabIndex = 27;
+            this.RegenTime.Location = new System.Drawing.Point(350, 6);
+            this.RegenTime.MaxLength = 5;
+            this.RegenTime.Name = "RegenTime";
+            this.RegenTime.Size = new System.Drawing.Size(100, 28);
+            this.RegenTime.TabIndex = 27;
             // 
             // label14
             // 
@@ -300,13 +306,13 @@
             this.label14.TabIndex = 26;
             this.label14.Text = "回血时间";
             // 
-            // textBox18
+            // ZombieBombRadius
             // 
-            this.textBox18.Location = new System.Drawing.Point(350, 303);
-            this.textBox18.MaxLength = 5;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 28);
-            this.textBox18.TabIndex = 41;
+            this.ZombieBombRadius.Location = new System.Drawing.Point(350, 303);
+            this.ZombieBombRadius.MaxLength = 5;
+            this.ZombieBombRadius.Name = "ZombieBombRadius";
+            this.ZombieBombRadius.Size = new System.Drawing.Size(100, 28);
+            this.ZombieBombRadius.TabIndex = 41;
             // 
             // label15
             // 
@@ -317,13 +323,13 @@
             this.label15.TabIndex = 40;
             this.label15.Text = "兽颅爆炸范围";
             // 
-            // textBox19
+            // ZombieBombPower
             // 
-            this.textBox19.Location = new System.Drawing.Point(350, 337);
-            this.textBox19.MaxLength = 5;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 28);
-            this.textBox19.TabIndex = 43;
+            this.ZombieBombPower.Location = new System.Drawing.Point(350, 337);
+            this.ZombieBombPower.MaxLength = 5;
+            this.ZombieBombPower.Name = "ZombieBombPower";
+            this.ZombieBombPower.Size = new System.Drawing.Size(100, 28);
+            this.ZombieBombPower.TabIndex = 43;
             // 
             // label16
             // 
@@ -334,49 +340,101 @@
             this.label16.TabIndex = 42;
             this.label16.Text = "兽颅爆炸威力";
             // 
+            // SaveBtn
+            // 
+            this.SaveBtn.Location = new System.Drawing.Point(469, 405);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(53, 38);
+            this.SaveBtn.TabIndex = 44;
+            this.SaveBtn.Text = "保存";
+            this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // CreatorWatermark
+            // 
+            this.CreatorWatermark.AutoSize = true;
+            this.CreatorWatermark.Location = new System.Drawing.Point(12, 402);
+            this.CreatorWatermark.Name = "CreatorWatermark";
+            this.CreatorWatermark.Size = new System.Drawing.Size(281, 22);
+            this.CreatorWatermark.TabIndex = 45;
+            this.CreatorWatermark.Text = "制作者：NewBTETeam - HowBang";
+            // 
+            // TiebaWatermark
+            // 
+            this.TiebaWatermark.AutoSize = true;
+            this.TiebaWatermark.Location = new System.Drawing.Point(12, 380);
+            this.TiebaWatermark.Name = "TiebaWatermark";
+            this.TiebaWatermark.Size = new System.Drawing.Size(165, 22);
+            this.TiebaWatermark.TabIndex = 46;
+            this.TiebaWatermark.Text = "官方贴吧：csoldjb吧";
+            this.TiebaWatermark.Click += new System.EventHandler(this.TiebaWatermark_Click);
+            // 
+            // QQWatermark
+            // 
+            this.QQWatermark.AutoSize = true;
+            this.QQWatermark.Location = new System.Drawing.Point(12, 358);
+            this.QQWatermark.Name = "QQWatermark";
+            this.QQWatermark.Size = new System.Drawing.Size(154, 22);
+            this.QQWatermark.TabIndex = 47;
+            this.QQWatermark.Text = "官方QQ：3266216";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(12, 424);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(200, 22);
+            this.label17.TabIndex = 48;
+            this.label17.Text = "制作者QQ：3054463734";
+            // 
             // Zombie3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 411);
-            this.Controls.Add(this.textBox19);
+            this.ClientSize = new System.Drawing.Size(534, 455);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.QQWatermark);
+            this.Controls.Add(this.TiebaWatermark);
+            this.Controls.Add(this.CreatorWatermark);
+            this.Controls.Add(this.SaveBtn);
+            this.Controls.Add(this.ZombieBombPower);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.ZombieBombRadius);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.SupplySpawnTime);
+            this.Controls.Add(this.SupplyMin);
+            this.Controls.Add(this.SupplyMax);
+            this.Controls.Add(this.LordRegenHP);
+            this.Controls.Add(this.MotherRegenHP);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.RegenTime);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.RespawnTime);
+            this.Controls.Add(this.MinHP);
+            this.Controls.Add(this.MaxHP);
+            this.Controls.Add(this.LordArmor);
+            this.Controls.Add(this.LordHP);
+            this.Controls.Add(this.MotherArmor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.MotherHP);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.SupplyFirstSpawnTime);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "Zombie3Form";
-            this.ShowIcon = false;
             this.Text = "僵尸3-基本设定";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -386,37 +444,42 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MotherHP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox MotherArmor;
+        private System.Windows.Forms.TextBox LordHP;
+        private System.Windows.Forms.TextBox LordArmor;
+        private System.Windows.Forms.TextBox MaxHP;
+        private System.Windows.Forms.TextBox MinHP;
+        private System.Windows.Forms.TextBox RespawnTime;
+        private System.Windows.Forms.TextBox SupplySpawnTime;
+        private System.Windows.Forms.TextBox SupplyFirstSpawnTime;
+        private System.Windows.Forms.TextBox SupplyMin;
+        private System.Windows.Forms.TextBox SupplyMax;
+        private System.Windows.Forms.TextBox LordRegenHP;
+        private System.Windows.Forms.TextBox MotherRegenHP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox RegenTime;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox ZombieBombRadius;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox ZombieBombPower;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Label CreatorWatermark;
+        private System.Windows.Forms.Label TiebaWatermark;
+        private System.Windows.Forms.Label QQWatermark;
+        private System.Windows.Forms.Label label17;
     }
 }
 
