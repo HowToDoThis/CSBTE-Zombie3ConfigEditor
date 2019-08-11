@@ -44,6 +44,19 @@ namespace CSBTE_Zombie3ConfigEditor
             // Zombie Bomb //
             ZombieBombPower.Text = zb3["Zombie Bomb"]["RADIUS"];
             ZombieBombRadius.Text = zb3["Zombie Bomb"]["POWER"];
+            ZombieBombDamage.Text = zb3["Zombie Bomb"]["DAMAGE"];
+            // Fog
+            string fog = zb3["Weather Effects"]["FOG"];
+            if (fog.Equals("1"))
+                FogChoose.Text = "开";
+            else if (fog.Equals("0"))
+                FogChoose.Text = "关";
+            // Sky
+            string sky = zb3["Sky Settint"]["SKY_ENABLE"];
+            if (fog.Equals("1"))
+                WeatherChoose.Text = "开";
+            else if (fog.Equals("0"))
+                WeatherChoose.Text = "关";
         }
 
         private void TiebaWatermark_Click(object sender, EventArgs e)
@@ -73,6 +86,11 @@ namespace CSBTE_Zombie3ConfigEditor
             // Zombie Bomb //
             zb3["Zombie Bomb"]["RADIUS"] = ZombieBombPower.Text;
             zb3["Zombie Bomb"]["POWER"] = ZombieBombRadius.Text;
+            zb3["Zombie Bomb"]["DAMAGE"] = ZombieBombDamage.Text;
+            // Fog
+            zb3["Weather Effects"]["FOG"] = Convert.ToString(FogChoose.SelectedIndex);
+            // Weather
+            zb3["Sky Settint"]["SKY_ENABLE"] = Convert.ToString(WeatherChoose.SelectedIndex);
 
             parser.WriteFile(zb3cfg, zb3);
         }
